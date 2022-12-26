@@ -60,43 +60,132 @@
       </li>
       <li class="item">
         <form id="form10" class="form10">
-          <label for="inputName">Login</label>
-          <input id="inputName" class="inputForm10" type="text" name="name" value="" required />
-
-          <label for="inputEmail">Email</label>
-          <input id="inputEmail" class="inputForm10" type="email" name="email" value="" required  />
-          
-          <label for="inputAge">Age</label>
-          <input id="inputAge" class="inputForm10" type="number" name="age" value="" />
-          
-          <label for="inputPassword">Password</label>
+          <label for="inputName" class="label10">Login</label>
           <input
-              id="inputPassword"
-              class="inputForm10"
-              type="password"
-              name="password"
-              value=""
-              minlength="6"
-              required
-            />
-        
-          <label for="inputConfirmPassword">Confirm Password</label>
+            id="inputName"
+            class="inputForm10"
+            type="text"
+            name="name"
+            value=""
+            required
+          />
+
+          <label for="inputEmail" class="label10">Email</label>
+          <input
+            id="inputEmail"
+            class="inputForm10"
+            name="email"
+            value=""
+            required
+          />
+          <!-- type="email" -->
+          <label for="inputAge" class="label10">Age</label>
+          <input
+            id="inputAge"
+            class="inputForm10"
+            type="number"
+            name="age"
+            value=""
+            required
+          />
+
+          <label for="inputPassword" class="label10">Password</label>
+          <input
+            id="inputPassword"
+            class="inputForm10"
+            type="password"
+            name="password"
+            value=""
+            required
+          />
+
+          <label for="inputConfirmPassword" class="label10"
+            >Confirm Password</label
+          >
           <input
             id="inputConfirmPassword"
             class="inputForm10"
-              type="confirm-password"
-              name="confirmPassword"
-              value=""
-              minlength="6"
-              autocomplete="current-password"
-              required
-            />
+            type="password"
+            name="confirmPassword"
+            value=""
+            autocomplete="current-password"
+            required
+          />
 
-          <button type="submit" class="btn">Registration</button>
+          <button id="submit" type="submit" class="btn submit10">
+            Registration
+          </button>
         </form>
       </li>
-    </ol>
+      <li class="item">
+        <div class="container-eleven">
+          <div class="calculator-eleven">
+            <input id="inputEleven" type="text" class="input-eleven" />
+            <div class="btns-eleven__container">
+              <button onclick="clickButton('7')" class="btns-eleven btns-eleven__margin">
+                7
+              </button>
+              <button onclick="clickButton('8')" class="btns-eleven btns-eleven__margin">
+                8
+              </button>
+              <button onclick="clickButton('9')" class="btns-eleven btns-eleven__margin">
+                9
+              </button>
+              <button  onclick="clickButton('/')" class="btns-eleven">/</button>
+            </div>
+            <div class="btns-eleven__container">
+              <button onclick="clickButton('4')" class="btns-eleven btns-eleven__margin">
+                4
+              </button>
+              <button onclick="clickButton('5')" class="btns-eleven btns-eleven__margin">
+                5
+              </button>
+              <button onclick="clickButton('6')" class="btns-eleven btns-eleven__margin">
+                6
+              </button>
+              <button onclick="clickButton('*')" class="btns-eleven">*</button>
+            </div>
 
+            <div class="btns-eleven__container">
+              <button onclick="clickButton('1')" class="btns-eleven btns-eleven__margin">
+                1
+              </button>
+              <button onclick="clickButton('2')" class="btns-eleven btns-eleven__margin">
+                2
+              </button>
+              <button onclick="clickButton('3')" class="btns-eleven btns-eleven__margin">
+                3
+              </button>
+              <button onclick="clickButton('-')" class="btns-eleven">-</button>
+            </div>
+
+            <div class="btns-eleven__container">
+              <button onclick="clickButton('0')" class="btns-eleven btns-eleven__margin">
+                0
+              </button>
+              <button onclick="result()" class="btns-eleven btns-eleven__margin">
+                =
+              </button>
+              <button onclick="clearInput()" class="btns-eleven btns-eleven__margin">
+                C
+              </button>
+              <button onclick="clickButton('+')" class="btns-eleven">+</button>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="item">
+        <button data-modal-open type="button" class="btn">Open modal</button>
+        <div class="backdrop is-hidden" data-modal>
+          <div class="modal">
+              <button data-modal-close class="modal__button-close">
+                  Close
+              </button>
+          </div>
+      </div>
+      </li>
+    </ol>
+   
     <script src="./one.js" type="module"></script>
     <script src="./two.js" type="module"></script>
     <script src="./three.js" type="module"></script>
@@ -107,7 +196,7 @@
     <script src="./eight.js" type="module"></script>
     <script src="./nine.js" type="module"></script>
     <script src="./ten.js" type="module"></script>
-    <script src="./eleven.js" type="module"></script>
+    <script src="./eleven.js"></script>
     <script src="./twelve.js" type="module"></script>
   </body>
 </html>
