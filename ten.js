@@ -30,12 +30,11 @@ function validationForm(event) {
       `<span class="insertedContent">*The login value must be no less than 4 characters and no more than 20 characters and must not contain the characters . _ / \ | ,</span>`
     );
     inputNameId.style.border = "1px solid red";
-    
     return false;
   } 
   
    if (
-    !emailValue.match(/(?=.*[a-z])(?=.*[.@])[.@a-z]/g)
+    !emailValue.trim().match(/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/g)
   ) {
   
     inputEmailId.insertAdjacentHTML(
@@ -43,7 +42,6 @@ function validationForm(event) {
       `<span class="insertedContentEmail">*The email value must be no empty and must has format text@text.text.</span>`
     );
     inputEmailId.style.border = "1px solid red";
-    
     return false;
   }
 
@@ -54,7 +52,6 @@ function validationForm(event) {
       `<span class="insertedContentAge">*The age value must be no less than 0 and typeof value must be number.</span>`
     );
     inputAgeId.style.border = "1px solid red";
-    
     return false;
   }
 
@@ -68,7 +65,6 @@ function validationForm(event) {
       `<span class="insertedContentPassword">*Password - must be non-empty, at least 6 characters long, have at least one capital letter and at least one number.</span>`
     );
     inputPasswordId.style.border = "1px solid red";
-    
     return false;
   } 
 
@@ -82,7 +78,6 @@ function validationForm(event) {
       `<span class="insertedContentConfirmPassword">*Confirm Password - must be non-empty and ...</span>`
     );
     inputConfirmPasswordId.style.border = "1px solid red";
-    
     return false;
   } 
 
@@ -100,7 +95,6 @@ function validationForm(event) {
   if (insertedContent) {
     insertedContent.parentNode.removeChild(insertedContent);
     inputNameId.style.border = 0;
-    
   }
 
   const insertedContentEmail = document.querySelector(".insertedContentEmail");
@@ -128,7 +122,7 @@ function validationForm(event) {
   );
   if (insertedContentConfirmPassword) {
     insertedContentConfirmPassword.parentNode.removeChild(insertedContentConfirmPassword);
-    inputPasswordId.style.border = 0;
+    inputConfirmPasswordId.style.border = 0;
   }
 
   event.target.reset();
